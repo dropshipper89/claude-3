@@ -1,0 +1,16 @@
+curl https://galaxyapi.onrender.com/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $GALAXYAI_API_KEY" \
+  -d '{
+    "model": "claude-3-haiku-20240307",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a helpful assistant."
+      },
+      {
+        "role": "user",
+        "content": "Hello!"
+      }
+    ]
+  }'
